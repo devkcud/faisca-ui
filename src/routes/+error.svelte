@@ -6,6 +6,10 @@
   const errorMessage = $page.error!.message;
 </script>
 
+<svelte:head>
+  <title>Erro {status} - Faísca</title>
+</svelte:head>
+
 <div class="absolute inset-4 flex flex-col items-center justify-center">
   <section class="flex items-center gap-4">
     <Icon icon="mingcute:sad-line" class="size-48 text-error max-md:size-28" />
