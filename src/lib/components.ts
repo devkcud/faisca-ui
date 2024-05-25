@@ -1,3 +1,4 @@
+import Card from './components/Card.svelte';
 import Carrousel from './components/Carrousel.svelte';
 
-export { Carrousel };
+export { Card, Carrousel };
