@@ -2,18 +2,22 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {}
+    extend: {
+      colors: {
+        tertiary: '#05112f'
+      }
+    }
   },
   daisyui: {
     logs: false,
     themes: [
       {
         main: {
-          primary: '#3F5DA8',
-          secondary: '#FA67DA',
-          accent: '#FFCC1A',
+          primary: '#3f5da8',
+          secondary: '#fa67da',
+          accent: '#ffcc1a',
           neutral: '#1f2937',
-          'base-100': '#F4F4F4',
+          'base-100': '#f4f4f4',
           info: '#2563eb',
           success: '#22c55e',
           warning: '#eab308',
