@@ -68,7 +68,7 @@
 
 <div class="divider mt-12 font-bold">Curiosidades do Projeto</div>
 
-<section class="flex gap-4 *:shrink-0 w-full overflow-auto p-4 my-8">
+<section class="flex gap-4 *:shrink-0 w-full overflow-auto p-6 my-8">
   <Curiosity color="blue">
     <Icon icon="ph:sun" slot="icon" />
 
