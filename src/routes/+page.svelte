@@ -68,40 +68,25 @@
 
 <div class="divider mt-12 font-bold">Curiosidades do Projeto</div>
 
-<section class="flex gap-4 *:shrink-0 w-full overflow-auto p-6 my-8">
+<section class="my-8 flex w-full gap-4 overflow-auto p-6 *:shrink-0">
   <Curiosity color="blue">
-    <Icon icon="ph:sun" slot="icon" />
+    <Icon icon="ph:book-fill" slot="icon" />
 
-    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
-    cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-    consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-    cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing
-    minim sint cillum sint consectetur cupidatat.
+    O Faísca reúne professores e alunos do Ensino Básico e Superior. Nosso objetivo central é
+    popularizar a ciência através de projetos de pesquisa interdisciplinares.
   </Curiosity>
 
   <Curiosity color="pink">
-    <Icon icon="ph:sun" slot="icon" />
+    <Icon icon="mdi:pencil" slot="icon" />
 
-    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
-    cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-    consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-    cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing
-    minim sint cillum sint consectetur cupidatat.
+    O Faísca Científica é um projeto de extensão que nasceu no Instituto de Estudos da Linguagem
+    (IEL) da Unicamp em parceria com escolas estaduais de São Paulo.
   </Curiosity>
 
   <Curiosity color="yellow">
-    <Icon icon="ph:sun" slot="icon" />
+    <Icon icon="ri:scissors-fill" slot="icon" />
 
-    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
-    cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint
-    consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-    cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing
-    minim sint cillum sint consectetur cupidatat.
-  </Curiosity>
-
-  <Curiosity color="blue">
-    <Icon icon="ph:sun" slot="icon" />
-
-    Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur
+    Em sua primeira edição, o Faísca reuniu 480 alunos do Ensino Médio, os quais receberam tutoria
+    acadêmica de alunos de graduação e pós-graduação do IEL.
   </Curiosity>
 </section>
