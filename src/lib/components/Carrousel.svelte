@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { onDestroy, onMount } from 'svelte';
   import { swipe } from 'svelte-gestures';
 
   export let images: [string, string][] = [];
@@ -9,8 +10,15 @@
   export let width: string | number = 'initial';
   export let maxHeight: string | number = 'initial';
   export let maxWidth: string | number = 'initial';
+  export let interval: number = 5;
 
   let currentIndex: number = 0;
+  let intervalID: number;
+
+  function setNewInterval() {
+    clearInterval(intervalID);
+    intervalID = setInterval(next, interval * 1000);
+  }
 
   function next() {
     currentIndex = currentIndex === images.length - 1 ? 0 : currentIndex + 1;
@@ -36,6 +44,21 @@
       default:
         break;
     }
+
+    setNewInterval();
+  }
+
+  function handleClick(to: 'next' | 'previous') {
+    switch (to) {
+      case 'next':
+        next();
+        break;
+      case 'previous':
+        previous();
+        break;
+    }
+
+    setNewInterval();
   }
 
   function handleProperty(property: string, value: any): string {
@@ -43,6 +66,14 @@
     if (isNaN(Number(value))) return `${property}: ${value}`;
     else return `${property}: ${value}px`;
   }
+
+  onMount(function () {
+    setNewInterval();
+  });
+
+  onDestroy(function () {
+    clearInterval(intervalID);
+  });
 </script>
 
 <div
@@ -53,6 +84,17 @@
     on:swipe={handleSwipe}
     class="relative overflow-hidden rounded-lg"
   >
+    <div
+      class="absolute inset-0 inset-x-1/2 left-0 top-0 z-10"
+      aria-hidden
+      on:click={() => handleClick('previous')}
+    />
+    <div
+      class="absolute inset-0 inset-x-1/2 right-0 top-0 z-10"
+      aria-hidden
+      on:click={() => handleClick('next')}
+    />
+
     <div
       class="flex transition-transform duration-500"
       style={`transform: translateX(-${currentIndex * 100}%)`}
