@@ -34,7 +34,7 @@
     <div class="divider" />
   </div>
 
-  <div class="mb-4 flex max-h-[600px] max-w-lg gap-3 max-md:hidden">
+  <div class="mb-4 flex min-h-[400px] max-h-[400px] max-w-lg gap-3 max-md:hidden">
     <div class="flex-1 space-y-3 *:rounded-xl *:object-cover">
       <img src="/assets/apresentacao.jpg" alt="" class="h-[calc(100%-11rem)] w-full" />
       <img src="/assets/sala.jpg" alt="" class="h-44 w-full" />
