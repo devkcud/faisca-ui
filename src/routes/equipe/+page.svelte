@@ -1,14 +1,14 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
-  import MainLayout from '$lib/layouts/MainLayout.svelte';
+  import NoMaxWidthLayout from '$lib/layouts/NoMaxWidthLayout.svelte';
 </script>
 
 <svelte:head>
   <title>Nossa Equipe - Faísca</title>
 </svelte:head>
 
-<MainLayout>
-  <section class="mb-8">
+<NoMaxWidthLayout>
+  <section class="mx-auto mb-8 max-w-[1200px] p-4">
     <h1 class="pb-4 text-3xl font-bold text-quaternary sm:text-5xl">Conheça nossa equipe</h1>
 
     <p>
@@ -18,9 +18,9 @@
     </p>
   </section>
 
-  <div class="relative w-full">
+  <div class="relative mb-4 w-full bg-gradient-to-r from-primary to-primary-light text-white max-sm:bg-gradient-to-b">
     <section
-      class="mx-auto max-w-4xl bg-primary-light py-4 text-primary-content bleed-bg bleed-primary-light max-sm:mx-auto max-sm:max-w-72 sm:pl-32"
+      class="mx-auto max-w-4xl py-4 text-primary-content max-xl:pl-32 max-sm:mx-auto max-sm:pl-4"
     >
       <div class="flex">
         <h2 class="flex-1 text-xl">
@@ -29,7 +29,7 @@
           <span class="font-semibold text-accent">membros</span>
         </h2>
 
-        <div class="flex items-end">
+        <div class="mr-4 flex items-end">
           <Icon icon="ph:star-four" font-size={40} class="text-accent" />
           <Icon icon="ph:star-four" font-size={20} class="text-secondary" />
         </div>
@@ -56,7 +56,7 @@
     <img
       src="/assets/grupo.png"
       alt=""
-      class="absolute -right-8 bottom-0 w-1/3 max-sm:scale-x-[-1] sm:-left-8 sm:w-1/4"
+      class="absolute bottom-0 right-0 w-1/3 max-w-52 max-sm:scale-x-[-1] sm:left-0"
     />
   </div>
-</MainLayout>
+</NoMaxWidthLayout>

@@ -6,7 +6,7 @@
 
 <Header />
 
-<main class="relative mx-auto h-full flex-1 p-4">
+<main class="relative mx-auto h-full flex-1">
   <slot />
 </main>
 
