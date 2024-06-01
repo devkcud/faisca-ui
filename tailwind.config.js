@@ -5,7 +5,8 @@ export default {
     extend: {
       colors: {
         tertiary: '#05112f',
-        'primary-light': '#5b84e8',
+        quaternary: '#011139',
+        'primary-light': '#5b84e8'
       }
     }
   },
