@@ -5,12 +5,16 @@
   let images: [string, string][] = [
     [
       '/banners/banner1.png',
-      'Três indivíduos surpresos, em um fundo branco com detalhes azuis, segurando e olhando um livro vermelho aberto de capa dura. No canto superior direito um texto realçando a logo-marca Faísca, com um perfil logo abaixo "@faiscacientifica". No lado direito da imagem, um texto promocional "Explore o projeto Faísca Científica e mergulhe em um vasto mundo de saberes!".'
+      /* alt */ '',
     ],
     [
       '/banners/banner2.png',
-      'A imagem destaca um balão de fala em azul e amarelo sobre um fundo branco. Dentro do balão, encontra-se o texto em português "Apoio Linguístico". Logo abaixo, há uma descrição do projeto "Faísca Científica", cujo propósito é auxiliar estudantes universitários no Brasil a aprimorar suas habilidades de escrita em português. No canto inferior direito, está o logotipo da "Faísca", enquanto no canto superior direito está o identificador "@faiscacientifica".'
-    ]
+      /* alt */ '',
+    ],
+    [
+      '/banners/banner3.png',
+      /* alt */ '',
+    ],
   ];
 </script>
 
