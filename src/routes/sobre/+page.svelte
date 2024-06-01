@@ -46,7 +46,7 @@
   </div>
 </section>
 
-<section class="my-8 flex gap-8 text-primary-content bleed-bg bleed-primary-light">
+<section class="my-8 flex gap-8 text-white bleed-bg bleed-primary-light">
   <img
     src="/assets/mulher-lupa.png"
     alt=""
