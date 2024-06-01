@@ -2,8 +2,12 @@
   import Icon from '@iconify/svelte';
 </script>
 
+<svelte:head>
+  <title>Nossa Equipe - Faísca</title>
+</svelte:head>
+
 <section class="mb-8">
-  <h1 class="pb-4 text-3xl font-bold sm:text-5xl text-quaternary">Conheça nossa equipe</h1>
+  <h1 class="pb-4 text-3xl font-bold text-quaternary sm:text-5xl">Conheça nossa equipe</h1>
 
   <p>
     O Faísca é um projeto construído por muitas mãos. Atualmente nossa equipe é constituída por dois
@@ -14,7 +18,7 @@
 
 <div class="relative w-full">
   <section
-    class="mx-auto max-w-4xl bg-primary-light py-4 sm:pl-32 text-primary-content bleed-bg bleed-primary-light max-sm:mx-auto max-sm:max-w-72"
+    class="mx-auto max-w-4xl bg-primary-light py-4 text-primary-content bleed-bg bleed-primary-light max-sm:mx-auto max-sm:max-w-72 sm:pl-32"
   >
     <div class="flex">
       <h2 class="flex-1 text-xl">
@@ -47,5 +51,9 @@
     </div>
   </section>
 
-  <img src="/assets/grupo.png" alt="" class="absolute bottom-0 -right-8 sm:w-1/4 w-1/3 sm:-left-8 max-sm:scale-x-[-1]" />
+  <img
+    src="/assets/grupo.png"
+    alt=""
+    class="absolute -right-8 bottom-0 w-1/3 max-sm:scale-x-[-1] sm:-left-8 sm:w-1/4"
+  />
 </div>

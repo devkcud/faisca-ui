@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Fale Conosco</title>
+  <title>Fale Conosco - Faísca</title>
 </svelte:head>
 
 <div class="flex gap-4 max-md:flex-col">

@@ -3,7 +3,7 @@
 </script>
 
 <svelte:head>
-  <title>Sobre Nós</title>
+  <title>Sobre Nós - Faísca</title>
 </svelte:head>
 
 <section class="flex gap-4 max-md:flex-col">
@@ -77,7 +77,9 @@
 
 <section class="flex items-center gap-4">
   <div>
-    <h2 class="max-w-xl text-2xl font-bold sm:text-3xl text-quaternary">Conheça Nossos Objetivos!</h2>
+    <h2 class="max-w-xl text-2xl font-bold text-quaternary sm:text-3xl">
+      Conheça Nossos Objetivos!
+    </h2>
 
     <p>
       O objetivo geral do projeto Faísca é o desenvolvimento de letramento científico, visando,

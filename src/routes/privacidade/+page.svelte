@@ -1,4 +1,6 @@
-
+<svelte:head>
+  <title>Política e Privacidade - Faísca</title>
+</svelte:head>
 
 <section class="space-y-4">
   <div>
