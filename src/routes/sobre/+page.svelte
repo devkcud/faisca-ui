@@ -6,9 +6,9 @@
   <title>Sobre Nós - Faísca</title>
 </svelte:head>
 
-<section class="flex gap-4 max-md:flex-col">
+<section class="flex gap-8 max-md:flex-col">
   <div>
-    <h2 class="mb-4 text-3xl font-bold text-quaternary sm:text-5xl">
+    <h2 class="mb-4 text-3xl font-bold text-quaternary sm:text-4xl">
       Conheça o projeto <span class="text-accent">Faísca Científica</span> e descubra um universo de
       <span class="text-accent">conhecimento</span>!
     </h2>
@@ -24,24 +24,22 @@
       </div>
     </div>
 
-    <p>
+    <p class="text-xl">
       O Faísca é um projeto de extensão que, dentro de uma abordagem transdisciplinar, visa: (i) 
       acender e desenvolver o pensamento científico, além de promover o amadurecimento da escrita,
       de alunos do 1º e 2 ano do Ensino Médio (EM) e (ii)  atuar na formação de graduandos e
       pós-graduandos e na formação continuada de professores do EM.
     </p>
-
-    <div class="divider" />
   </div>
 
-  <div class="mb-4 flex min-h-[400px] max-h-[400px] max-w-lg gap-3 max-md:hidden">
+  <div class="mb-4 flex min-h-[400px] max-h-[400px] gap-3 max-md:hidden">
     <div class="flex-1 space-y-3 *:rounded-xl *:object-cover">
       <img src="/assets/apresentacao.jpg" alt="" class="h-[calc(100%-11rem)] w-full" />
       <img src="/assets/sala.jpg" alt="" class="h-44 w-full" />
     </div>
     <div class="flex-1 space-y-3 *:rounded-xl *:object-cover">
-      <img src="/assets/equipe.jpg" alt="" class="h-44 w-full" />
-      <img src="/assets/ti.jpg" alt="" class="h-[calc(100%-11rem)] w-full" />
+      <img src="/assets/equipe.jpg" alt="" class="h-28 w-full" />
+      <img src="/assets/ti.jpg" alt="" class="h-[calc(100%-7rem)] w-full" />
     </div>
   </div>
 </section>

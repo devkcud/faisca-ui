@@ -19,7 +19,7 @@
 
   <a
     {href}
-    class="btn btn-accent mt-4 h-8 min-h-8 w-fit border-none uppercase shadow-none"
+    class="btn btn-accent text-white mt-4 h-8 min-h-8 w-fit border-none uppercase shadow-none"
     class:yellow={color === 'yellow'}
     class:pink={color === 'pink'}
     class:blue={color === 'blue'}
@@ -30,14 +30,14 @@
 
 <style lang="postcss">
   .yellow {
-    @apply bg-accent text-accent-content;
+    @apply bg-accent;
   }
 
   .pink {
-    @apply bg-secondary text-secondary-content;
+    @apply bg-secondary;
   }
 
   .blue {
-    @apply bg-primary text-primary-content;
+    @apply bg-primary;
   }
 </style>

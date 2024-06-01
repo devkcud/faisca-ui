@@ -3,18 +3,9 @@
   import { Card, Carrousel, Curiosity } from '$lib/components';
 
   let images: [string, string][] = [
-    [
-      '/banners/banner1.png',
-      /* alt */ '',
-    ],
-    [
-      '/banners/banner2.png',
-      /* alt */ '',
-    ],
-    [
-      '/banners/banner3.png',
-      /* alt */ '',
-    ],
+    ['/banners/banner1.png', /* alt */ ''],
+    ['/banners/banner2.png', /* alt */ ''],
+    ['/banners/banner3.png', /* alt */ '']
   ];
 </script>
 
@@ -24,9 +15,11 @@
 
 <Carrousel {images}></Carrousel>
 
-<div class="divider mt-12 font-bold">Conheça nossos Artigos de Divulgação Científica</div>
+<div class="divider mt-12 font-bold text-quaternary">
+  Conheça nossos Artigos de Divulgação Científica
+</div>
 
-<section class="grid grid-cols-1 place-items-center sm:grid-cols-2 lg:grid-cols-3">
+<section class="grid grid-cols-1 place-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
   <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="yellow">
     Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad
     nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia.
@@ -70,7 +63,7 @@
   </Card>
 </section>
 
-<div class="divider mt-12 font-bold">Curiosidades do Projeto</div>
+<div class="divider mt-12 font-bold text-quaternary">Curiosidades do Projeto</div>
 
 <section class="my-8 flex w-full gap-4 overflow-auto p-6 *:shrink-0">
   <Curiosity color="blue">

@@ -3,42 +3,29 @@
 </script>
 
 <article class="relative w-full max-w-96 rounded-xl bg-white p-4 shadow-lg shadow-black/10">
-  <div
-    class="absolute inset-x-0 -top-6 *:mx-auto *:size-12 *:rounded-full *:bg-white *:p-2 *:shadow-lg *:shadow-black/20"
-    class:yellow={color === 'yellow'}
-    class:pink={color === 'pink'}
-    class:blue={color === 'blue'}
-  >
-    <slot name="icon" />
-  </div>
+  <!-- Kinda hacky, but design wants it that way -->
 
-  <p class="pt-4 text-center">
+  {#if color === 'blue'}
+    <div
+      class="absolute inset-x-0 -top-6 text-primary *:mx-auto *:size-14 *:rounded-full *:border *:border-primary *:bg-white *:p-2 *:shadow-lg *:shadow-black/20"
+    >
+      <slot name="icon" />
+    </div>
+  {:else if color === 'yellow'}
+    <div
+      class="absolute inset-x-0 -top-6 text-accent *:mx-auto *:size-14 *:rounded-full *:border *:border-accent *:bg-white *:p-2 *:shadow-lg *:shadow-black/20"
+    >
+      <slot name="icon" />
+    </div>
+  {:else if color === 'pink'}
+    <div
+      class="absolute inset-x-0 -top-6 text-secondary *:mx-auto *:size-14 *:rounded-full *:border *:border-secondary *:bg-white *:p-2 *:shadow-lg *:shadow-black/20"
+    >
+      <slot name="icon" />
+    </div>
+  {/if}
+
+  <p class="pt-6 text-center">
     <slot />
   </p>
 </article>
-
-<style lang="postcss">
-  .yellow {
-    @apply text-accent;
-  }
-
-  .yellow > * {
-    @apply border border-accent;
-  }
-
-  .pink {
-    @apply text-secondary;
-  }
-
-  .pink > * {
-    @apply border border-secondary;
-  }
-
-  .blue {
-    @apply text-primary;
-  }
-
-  .blue > * {
-    @apply border border-primary;
-  }
-</style>
