@@ -13,7 +13,7 @@
     <img src={image.src} alt={image.alt} class="h-52 w-full rounded-xl object-cover" />
   </figure>
 
-  <p class="line-clamp-3 h-[72px]">
+  <p class="line-clamp-3 h-[72px] text-black">
     <slot />
   </p>
 
