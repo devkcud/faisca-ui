@@ -3,7 +3,7 @@
 </script>
 
 <section class="mb-8">
-  <h1 class="pb-4 text-3xl font-bold sm:text-5xl">Conheça nossa equipe</h1>
+  <h1 class="pb-4 text-3xl font-bold sm:text-5xl text-quaternary">Conheça nossa equipe</h1>
 
   <p>
     O Faísca é um projeto construído por muitas mãos. Atualmente nossa equipe é constituída por dois

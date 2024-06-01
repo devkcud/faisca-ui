@@ -15,9 +15,9 @@
     <Icon icon="mingcute:sad-line" class="size-48 text-error max-md:size-28" />
 
     <div>
-      <p class="text-sm opacity-70" aria-hidden>Ah, não!</p>
+      <p class="text-sm" aria-hidden>Ah, não!</p>
       <h1 class="text-7xl font-black text-error max-md:text-4xl">Erro {status}</h1>
-      <p class="w-full text-end text-sm opacity-70" aria-hidden>{errorMessage}</p>
+      <p class="w-full text-end text-sm" aria-hidden>{errorMessage}</p>
     </div>
   </section>
 

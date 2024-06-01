@@ -8,10 +8,10 @@
 
 <section class="flex gap-4 max-md:flex-col">
   <div>
-    <h1 class="mb-4 text-3xl font-bold sm:text-5xl">
+    <h2 class="mb-4 text-3xl font-bold text-quaternary sm:text-5xl">
       Conheça o projeto <span class="text-accent">Faísca Científica</span> e descubra um universo de
       <span class="text-accent">conhecimento</span>!
-    </h1>
+    </h2>
 
     <div class="mb-4 flex max-h-[600px] gap-3 md:hidden">
       <div class="flex-1 space-y-3 *:rounded-xl *:object-cover">
@@ -77,7 +77,7 @@
 
 <section class="flex items-center gap-4">
   <div>
-    <h2 class="max-w-xl text-2xl font-bold sm:text-3xl">Conheça Nossos Objetivos!</h2>
+    <h2 class="max-w-xl text-2xl font-bold sm:text-3xl text-quaternary">Conheça Nossos Objetivos!</h2>
 
     <p>
       O objetivo geral do projeto Faísca é o desenvolvimento de letramento científico, visando,
@@ -90,7 +90,7 @@
         <Icon icon="fluent:pen-sparkle-32-regular" class="size-7 shrink-0 text-primary" />
 
         <div>
-          <h3 class="font-bold">Possibilidades oferecidas</h3>
+          <h3 class="font-bold text-quaternary">Possibilidades oferecidas</h3>
 
           <p class="opacity-80">
             O Faísca promove o pensamento científico aos jovens, incentivando a curiosidade, o
@@ -103,7 +103,7 @@
         <Icon icon="fluent:hat-graduation-12-filled" class="size-7 shrink-0 text-primary" />
 
         <div>
-          <h3 class="font-bold">Oportunidades únicas</h3>
+          <h3 class="font-bold text-quaternary">Oportunidades únicas</h3>
 
           <p class="opacity-80">
             O Faísca contribui para a formação técnica, científica e cidadã dos participantes,

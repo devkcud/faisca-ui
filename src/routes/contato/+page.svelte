@@ -4,7 +4,7 @@
 
 <div class="flex gap-4 max-md:flex-col">
   <section class="flex-1 space-y-4">
-    <h2 class="text-4xl font-bold">Fale conosco</h2>
+    <h2 class="text-4xl font-bold text-quaternary">Fale conosco</h2>
 
     <p class="opacity-80">
       Queremos ouvir você! Seja para dar um feedback, fazer uma pergunta ou simplesmente dizer um
