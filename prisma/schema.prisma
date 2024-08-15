@@ -12,11 +12,12 @@ model Article {
   title         String
   summary       String
   body          String
-  author        String
+  author        String[]
   advisor       String[]
   coordinator   String[]
   registered_at DateTime @default(now())
   updated_at    DateTime @updatedAt
+  references    String[]
   pdf_url       String
   thumb_url     String
   inner_images  String[]

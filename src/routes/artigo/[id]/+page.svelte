@@ -23,34 +23,61 @@
 
         <span class="mt-auto italic opacity-40">Leia agora o Artigo de Divulgação Científica</span>
 
-        <button
-          class="sticky top-2 my-2 rounded-xl bg-warning px-6 py-2 font-semibold opacity-40 transition-all hover:opacity-100"
-        >
-          Fazer download do PDF
-        </button>
+        {#if data.article.pdf_url && data.article.pdf_url !== ''}
+          <a
+            href={data.article.pdf_url}
+            class="sticky top-2 my-2 rounded-xl bg-warning px-6 py-2 text-center font-semibold opacity-40 transition-all hover:opacity-100"
+          >
+            Fazer download do PDF
+          </a>
+        {/if}
 
         <div class="flex max-h-[400px] min-h-[400px] gap-3 md:hidden md:max-w-md">
           <div class="flex flex-1 flex-col gap-3 *:rounded-xl *:object-cover">
-            <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
-            <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
+            <img
+              src={data.article.inner_images[0] ?? 'https://placehold.co/400x400'}
+              alt=""
+              class="h-1/2 w-full"
+            />
+            <img
+              src={data.article.inner_images[1] ?? 'https://placehold.co/400x400'}
+              alt=""
+              class="h-1/2 w-full"
+            />
           </div>
           <div class="flex-1 space-y-3 *:rounded-xl *:object-cover">
-            <img src="https://placehold.co/400x400" alt="" class="h-full w-full" />
+            <img
+              src={data.article.inner_images[2] ?? 'https://placehold.co/400x400'}
+              alt=""
+              class="h-full w-full"
+            />
           </div>
         </div>
 
-        <article class="mt-4 text-justify text-xl">
+        <article class="mt-4 text-justify font-serif text-xl">
           {@html converter.makeHtml(data.article.body)}
         </article>
       </div>
 
       <div class="flex max-h-[400px] min-h-[400px] gap-3 max-md:hidden md:max-w-md">
         <div class="flex flex-1 flex-col gap-3 *:rounded-xl *:object-cover">
-          <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
-          <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
+          <img
+            src={data.article.inner_images[0] ?? 'https://placehold.co/400x400'}
+            alt=""
+            class="h-1/2 w-full"
+          />
+          <img
+            src={data.article.inner_images[1] ?? 'https://placehold.co/400x400'}
+            alt=""
+            class="h-1/2 w-full"
+          />
         </div>
         <div class="flex-1 space-y-3 *:rounded-xl *:object-cover">
-          <img src="https://placehold.co/400x400" alt="" class="h-full w-full" />
+          <img
+            src={data.article.inner_images[2] ?? 'https://placehold.co/400x400'}
+            alt=""
+            class="h-full w-full"
+          />
         </div>
       </div>
     </section>
