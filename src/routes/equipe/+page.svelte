@@ -18,7 +18,9 @@
     </p>
   </section>
 
-  <div class="relative mb-4 w-full bg-gradient-to-r from-primary to-primary-light text-white max-sm:bg-gradient-to-b">
+  <div
+    class="relative mb-4 w-full bg-gradient-to-r from-primary to-primary-light text-white max-sm:bg-gradient-to-b"
+  >
     <section
       class="mx-auto max-w-4xl py-4 text-primary-content max-xl:pl-32 max-sm:mx-auto max-sm:pl-4"
     >

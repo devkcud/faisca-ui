@@ -31,6 +31,7 @@
           name="name"
           placeholder="Digite seu nome completo"
           class="input w-full"
+          required
         />
       </label>
 
@@ -39,7 +40,13 @@
           <span class="label-text font-bold">E-mail</span>
         </div>
 
-        <input type="text" name="name" placeholder="Digite seu e-mail" class="input w-full" />
+        <input
+          type="email"
+          name="email"
+          placeholder="Digite seu e-mail"
+          class="input w-full"
+          required
+        />
       </label>
 
       <label class="form-control w-full">
@@ -47,7 +54,13 @@
           <span class="label-text font-bold">Assunto</span>
         </div>
 
-        <input type="text" name="name" placeholder="Digite o assunto" class="input w-full" />
+        <input
+          type="text"
+          name="topic"
+          placeholder="Digite o assunto"
+          class="input w-full"
+          required
+        />
       </label>
 
       <label class="form-control flex-1">
@@ -56,13 +69,14 @@
         </div>
 
         <textarea
+          name="message"
           placeholder="Digite sua mensagem"
           class="textarea h-full resize-none overflow-y-auto"
           required
         />
       </label>
 
-      <button class="btn btn-primary ml-auto w-fit">Enviar</button>
+      <button type="submit" class="btn btn-primary ml-auto w-fit">Enviar</button>
     </form>
   </div>
 </MainLayout>

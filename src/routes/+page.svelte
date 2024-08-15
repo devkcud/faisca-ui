@@ -2,12 +2,15 @@
   import Icon from '@iconify/svelte';
   import { Card, Carrousel, Curiosity } from '$lib/components';
   import MainLayout from '$lib/layouts/MainLayout.svelte';
+  import type { PageServerData } from './$types';
 
   let images: [string, string][] = [
     ['/banners/banner1.png', /* alt */ ''],
     ['/banners/banner2.png', /* alt */ ''],
     ['/banners/banner3.png', /* alt */ '']
   ];
+
+  export let data: PageServerData;
 </script>
 
 <svelte:head>
@@ -22,47 +25,19 @@
   </div>
 
   <section class="grid grid-cols-1 place-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
-    <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="yellow">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-      ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-      officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      minim nulla est proident.
-    </Card>
+    {#if data.articles.length === 0}
+      <p class="col-span-full">Nenhum artigo publicado...</p>
+    {/if}
 
-    <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="blue">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-      ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-      officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      minim nulla est proident.
-    </Card>
-
-    <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="pink">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-      ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-      officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      minim nulla est proident.
-    </Card>
-
-    <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="yellow">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-      ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-      officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      minim nulla est proident.
-    </Card>
-
-    <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="blue">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-      ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-      officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      minim nulla est proident.
-    </Card>
-
-    <Card href="/" image={{ src: 'https://placehold.co/400x400', alt: 'Teste' }} color="pink">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-      ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur
-      officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor
-      minim nulla est proident.
-    </Card>
+    {#each data.articles as article}
+      <Card
+        href="/artigo/{article.id}"
+        image={{ src: article.thumb_url, alt: article.title }}
+        color="blue"
+      >
+        {article.summary}
+      </Card>
+    {/each}
   </section>
 
   <div class="divider mt-12 font-bold text-quaternary">Curiosidades do Projeto</div>

@@ -10,11 +10,11 @@
   </a>
 
   <section class="flex gap-4">
-    <form>
+    <form action="/pesquisa">
       <label class="flex items-center">
         <input
           type="text"
-          name="search"
+          name="q"
           placeholder="Digite o que você procura"
           class="input input-sm rounded-full pr-10 max-sm:input-xs max-sm:max-w-56"
         />

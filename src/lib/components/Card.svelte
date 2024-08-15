@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let title: string = '';
   export let href: string;
   export let image: {
     src: string;
@@ -12,6 +13,12 @@
   <figure class="mx-auto mb-4 w-full">
     <img src={image.src} alt={image.alt} class="h-52 w-full rounded-xl object-cover" />
   </figure>
+
+  {#if title !== ''}
+    <h2 class="font-semibold">{title}</h2>
+
+    <div class="divider" />
+  {/if}
 
   <p class="line-clamp-3 h-[72px] text-black">
     <slot />
