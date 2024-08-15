@@ -31,6 +31,7 @@
 
     {#each data.articles as article}
       <Card
+        title={article.title}
         href="/artigo/{article.id}"
         image={{ src: article.thumb_url, alt: article.title }}
         color="blue"

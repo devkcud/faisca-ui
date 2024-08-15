@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <article class="mt-4 text-justify font-serif text-xl">
+        <article class="mt-4 space-y-4 text-justify font-serif text-xl leading-8">
           {@html converter.makeHtml(data.article.body)}
         </article>
       </div>
@@ -90,8 +90,8 @@
       <Icon icon="fluent-emoji-high-contrast:writing-hand" font-size={32} />
 
       <div>
-        <p class="font-bold">Autor</p>
-        <p>{data.article.author}</p>
+        <p class="font-bold">Autor{data.article.author.length > 1 ? 'es' : ''}</p>
+        <p>{data.article.author.join(', ')}</p>
       </div>
     </div>
 
@@ -99,7 +99,7 @@
       <Icon icon="fontisto:person" font-size={32} />
 
       <div>
-        <p class="font-bold">Orientador</p>
+        <p class="font-bold">Orientador{data.article.advisor.length > 1 ? 'es' : ''}</p>
         <p>{data.article.advisor.join(', ')}</p>
       </div>
     </div>
@@ -108,7 +108,7 @@
       <Icon icon="mdi:account-tie-hat" font-size={40} />
 
       <div>
-        <p class="font-bold">Coordenador</p>
+        <p class="font-bold">Coordenador{data.article.coordinator.length > 1 ? 'es' : ''}</p>
         <p>{data.article.coordinator.join(', ')}</p>
       </div>
     </div>
@@ -128,6 +128,20 @@
       </div>
     </div>
   </section>
+
+  <details>
+    <summary class="cursor-pointer text-xl font-bold">Referências</summary>
+
+    <ul>
+      {#each data.article.references as reference}
+        <li>
+          {reference}
+        </li>
+      {/each}
+    </ul>
+  </details>
+
+  <div class="divider"></div>
 
   <section class="mx-auto w-3/4 space-y-4 rounded-xl bg-warning p-8">
     <h2 class="text-2xl font-semibold">

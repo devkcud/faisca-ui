@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+ul {
+  @apply m-4 list-inside list-disc space-y-4;
+}

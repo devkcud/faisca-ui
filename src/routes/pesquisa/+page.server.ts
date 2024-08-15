@@ -15,8 +15,7 @@ export const load: PageServerLoad = async function ({ url }) {
       OR: [
         { title: { contains: query, mode: 'insensitive' } },
         { summary: { contains: query, mode: 'insensitive' } },
-        { body: { contains: query, mode: 'insensitive' } },
-        { author: { contains: query, mode: 'insensitive' } },
+        { body: { contains: query, mode: 'insensitive' } }
       ]
     },
     orderBy: {
