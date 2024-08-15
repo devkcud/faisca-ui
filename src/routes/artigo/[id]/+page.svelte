@@ -21,7 +21,15 @@
           {data.article.title}
         </h2>
 
-        <div class="mb-4 flex min-h-[400px] gap-3 md:hidden">
+        <span class="mt-auto italic opacity-40">Leia agora o Artigo de Divulgação Científica</span>
+
+        <button
+          class="sticky top-2 my-2 rounded-xl bg-warning px-6 py-2 font-semibold opacity-40 transition-all hover:opacity-100"
+        >
+          Fazer download do PDF
+        </button>
+
+        <div class="flex max-h-[400px] min-h-[400px] gap-3 md:hidden md:max-w-md">
           <div class="flex flex-1 flex-col gap-3 *:rounded-xl *:object-cover">
             <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
             <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
@@ -31,10 +39,12 @@
           </div>
         </div>
 
-        <span class="mt-auto italic opacity-40">Leia agora o Artigo de Divulgação Científica</span>
+        <article class="mt-4 text-justify text-xl">
+          {@html converter.makeHtml(data.article.body)}
+        </article>
       </div>
 
-      <div class="mb-4 flex max-h-[400px] min-h-[400px] max-w-md gap-3 max-md:hidden">
+      <div class="flex max-h-[400px] min-h-[400px] gap-3 max-md:hidden md:max-w-md">
         <div class="flex flex-1 flex-col gap-3 *:rounded-xl *:object-cover">
           <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
           <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
@@ -44,16 +54,6 @@
         </div>
       </div>
     </section>
-
-    <article class="mt-4 text-xl">
-      {@html converter.makeHtml(data.article.body)}
-    </article>
-
-    <button
-      class="absolute bottom-4 right-0 rounded-xl bg-warning px-6 py-2 font-semibold opacity-40 focus:opacity-100"
-    >
-      PDF
-    </button>
   </div>
 
   <section
