@@ -1,9 +1,12 @@
 <script lang="ts">
   import Icon from '@iconify/svelte';
   import MainLayout from '$lib/layouts/MainLayout.svelte';
+  import showdown from 'showdown';
   import type { PageServerData } from './$types';
 
   export let data: PageServerData;
+
+  const converter = new showdown.Converter();
 </script>
 
 <svelte:head>
@@ -18,8 +21,6 @@
           {data.article.title}
         </h2>
 
-        <!-- Audio button -->
-
         <div class="mb-4 flex min-h-[400px] gap-3 md:hidden">
           <div class="flex flex-1 flex-col gap-3 *:rounded-xl *:object-cover">
             <img src="https://placehold.co/400x400" alt="" class="h-1/2 w-full" />
@@ -29,12 +30,6 @@
             <img src="https://placehold.co/400x400" alt="" class="h-full w-full" />
           </div>
         </div>
-
-        <h3 class="mb-4 text-2xl font-bold text-quaternary sm:text-3xl">Resumo</h3>
-
-        <p class="text-xl">
-          {data.article.summary}
-        </p>
 
         <span class="mt-auto italic opacity-40">Leia agora o Artigo de Divulgação Científica</span>
       </div>
@@ -50,10 +45,8 @@
       </div>
     </section>
 
-    <article class="mt-4 grid grid-cols-2 gap-x-4 gap-y-8 max-md:grid-cols-1">
-      {#each data.article.body.repeat(10).split('\n') as chunk}
-        <p class="text-justify">{chunk}</p>
-      {/each}
+    <article class="mt-4 text-xl">
+      {@html converter.makeHtml(data.article.body)}
     </article>
 
     <button
