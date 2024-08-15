@@ -19,7 +19,6 @@
     "prettier": "^3.1.1",
     "prettier-plugin-svelte": "^3.1.2",
     "prettier-plugin-tailwindcss": "^0.5.14",
-    "prisma": "5.18.0",
     "svelte": "^4.2.7",
     "svelte-check": "^3.6.0",
     "tailwindcss": "^3.4.3",
@@ -38,11 +37,13 @@
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write .",
     "prisma": "prisma",
-    "db": "prisma db push"
+    "db": "prisma db push",
+    "postinstall": "prisma generate"
   },
   "type": "module",
   "dependencies": {
     "@prisma/client": "5.18.0",
+    "prisma": "5.18.0",
     "svelte-gestures": "^4.0.0"
   }
 }
