@@ -24,9 +24,5 @@
         </button>
       </label>
     </form>
-
-    <button>
-      <Icon icon="material-symbols:menu" class="size-6 text-primary-content" />
-    </button>
   </section>
 </header>
